@@ -1,0 +1,399 @@
+esphome:
+  name: nixie1093
+  friendly_name: Nixie1093
+  on_boot:
+    - priority: 600
+      then:
+        - script.execute:
+            id: update_nixie_display
+            value: 0
+    - priority: -100
+      then:
+        - light.turn_on:
+            id: backlight
+            brightness: 50%
+            effect: "Random color"
+
+esp32:
+  board: lolin_s2_mini
+  variant: esp32s2
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: !secret api_encryption_key
+
+ota:
+  - platform: esphome
+    password: !secret ota_password
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  power_save_mode: none
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Nixie1093 Fallback Hotspot"
+    password: !secret ap_password
+
+captive_portal:
+
+globals:
+  - id: current_nixie_value
+    type: int
+    restore_value: no
+    initial_value: '-1'
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+    timezone: Europe/Amsterdam
+    on_time_sync:
+      then:
+        - if:
+            condition:
+              lambda: 'return id(display_mode).current_option() == "Time";'
+            then:
+              - lambda: |-
+                  auto now = id(homeassistant_time).now();
+                  if (now.is_valid()) {
+                    int hhmm = now.hour * 100 + now.minute;
+                    id(nixie_int).publish_state(hhmm);
+                    id(update_nixie_display).execute(hhmm);
+                  }
+    on_time:
+      - seconds: 0
+        minutes: /1
+        then:
+          - if:
+              condition:
+                lambda: 'return id(display_mode).current_option() == "Time";'
+              then:
+                - lambda: |-
+                    auto now = id(homeassistant_time).now();
+                    if (now.is_valid()) {
+                      int hhmm = now.hour * 100 + now.minute;
+                      id(nixie_int).publish_state(hhmm);
+                      id(update_nixie_display).execute(hhmm);
+                    }
+
+sensor:
+  - platform: homeassistant
+    id: powerusage
+    entity_id: sensor.power_delivered
+    on_value:
+      then:
+        - if:
+            condition:
+              lambda: 'return id(display_mode).current_option() == "Power Usage";'
+            then:
+              - lambda: |-
+                  if (!std::isnan(id(powerusage).state)) {
+                    int watts = (int) round(id(powerusage).state * 1000.0f);
+                    id(nixie_int).publish_state(watts);
+                    id(update_nixie_display).execute(watts);
+                  }
+
+# Shift register pins on S2 Mini left header (matching board header order: LED=GPIO33, EN=GPIO35, CLK=GPIO37, DO/Data=GPIO39)
+output:
+  - platform: gpio
+    id: nixie_en_pin
+    pin: GPIO35
+  - platform: gpio
+    id: nixie_clk_pin
+    pin: GPIO37
+  - platform: gpio
+    id: nixie_din_pin
+    pin: GPIO39
+
+script:
+  - id: update_nixie_display
+    parameters:
+      value: int
+    mode: restart
+    then:
+      - lambda: |-
+          int new_val = value;
+          if (new_val < 0) new_val = 0;
+          if (new_val > 9999) new_val = 9999;
+
+          int old_val = id(current_nixie_value);
+
+          // Cathodes assignment to the position in the 48-bit shift register array
+          const uint8_t nixie1[10] = {  0,  1,  2,  3,  4,  5,  6,  7,  8,  9 };
+          const uint8_t nixie2[10] = { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 };
+          const uint8_t nixie3[10] = { 24, 25, 26, 27, 28, 29, 30, 31, 32, 33 };
+          const uint8_t nixie4[10] = { 34, 35, 36, 37, 38, 39, 40, 41, 42, 43 };
+
+          auto shift_out_number = [&](int n) {
+            uint8_t d1 = (n / 1000U) % 10;
+            uint8_t d2 = (n / 100U) % 10;
+            uint8_t d3 = (n / 10U) % 10;
+            uint8_t d4 = (n / 1U) % 10;
+
+            bool bits[48] = {false};
+            bits[nixie1[d1]] = true;
+            bits[nixie2[d2]] = true;
+            bits[nixie3[d3]] = true;
+            bits[nixie4[d4]] = true;
+
+            id(nixie_en_pin).turn_off();
+            id(nixie_din_pin).turn_off();
+            id(nixie_clk_pin).turn_off();
+
+            for (int i = 47; i >= 0; i--) {
+              if (bits[i]) {
+                id(nixie_din_pin).turn_on();
+              } else {
+                id(nixie_din_pin).turn_off();
+              }
+              id(nixie_clk_pin).turn_on();
+              id(nixie_clk_pin).turn_off();
+            }
+
+            id(nixie_en_pin).turn_on();
+            id(nixie_clk_pin).turn_off();
+          };
+
+          ESP_LOGD("nixie", "Displaying value: %04d (previous: %04d)", new_val, old_val);
+
+          // Crossfade if enabled and previous value was valid and different
+          if (id(nixie_crossfade).state && old_val >= 0 && old_val != new_val) {
+            const int steps = 25;
+            const int period_us = 10000; // 10ms per cycle (100Hz PWM, 250ms total fade)
+            for (int step = 1; step < steps; step++) {
+              int new_on_us = (step * period_us) / steps;
+              int old_on_us = period_us - new_on_us;
+
+              shift_out_number(old_val);
+              delayMicroseconds(old_on_us);
+
+              shift_out_number(new_val);
+              delayMicroseconds(new_on_us);
+            }
+          }
+
+          // Latch final new value
+          shift_out_number(new_val);
+          id(current_nixie_value) = new_val;
+
+select:
+  - platform: template
+    name: "Nixie Display Mode"
+    id: display_mode
+    optimistic: true
+    options:
+      - "Time"
+      - "Power Usage"
+      - "Manual"
+      - "Test Cycle"
+    initial_option: "Time"
+    on_value:
+      then:
+        - if:
+            condition:
+              lambda: 'return x == "Time";'
+            then:
+              - lambda: |-
+                  auto now = id(homeassistant_time).now();
+                  if (now.is_valid()) {
+                    int hhmm = now.hour * 100 + now.minute;
+                    id(nixie_int).publish_state(hhmm);
+                    id(update_nixie_display).execute(hhmm);
+                  }
+        - if:
+            condition:
+              lambda: 'return x == "Power Usage";'
+            then:
+              - lambda: |-
+                  if (!std::isnan(id(powerusage).state)) {
+                    int watts = (int) round(id(powerusage).state * 1000.0f);
+                    id(nixie_int).publish_state(watts);
+                    id(update_nixie_display).execute(watts);
+                  }
+
+number:
+  - platform: template
+    name: "Nixiedisplay"
+    id: nixie_int
+    optimistic: true
+    min_value: 0
+    max_value: 9999
+    initial_value: 0
+    mode: box
+    step: 1
+    set_action:
+      - script.execute:
+          id: update_nixie_display
+          value: !lambda "return (int) round(x);"
+
+light:
+  - platform: esp32_rmt_led_strip
+    channel_colors: GRB
+    pin: GPIO33
+    num_leds: 6
+    chipset: ws2812
+    use_psram: false
+    name: "backlight"
+    id: "backlight"
+    effects:
+      - random:
+          name: "Random color"
+          transition_length: 5s
+          update_interval: 10s
+      - addressable_lambda:
+          name: "Synthwave Sunset Drift"
+          update_interval: 40ms
+          lambda: |-
+            static uint16_t phase = 0;
+            // 4-color Nixie-friendly palette: Warm Amber -> Crimson -> Magenta -> Deep Violet
+            const uint8_t palette[4][3] = {
+              {255,  70,   0},
+              {220,  10,  40},
+              {180,   0, 160},
+              { 30,  10, 220}
+            };
+            for (int i = 0; i < it.size(); i++) {
+              uint16_t pos = (phase + i * 128) & 0x3FF; // 0..1023
+              uint8_t idx1 = (pos >> 8) & 0x03;
+              uint8_t idx2 = (idx1 + 1) & 0x03;
+              uint8_t frac = pos & 0xFF;
+              uint8_t r = palette[idx1][0] + ((int)(palette[idx2][0] - palette[idx1][0]) * frac) / 255;
+              uint8_t g = palette[idx1][1] + ((int)(palette[idx2][1] - palette[idx1][1]) * frac) / 255;
+              uint8_t b = palette[idx1][2] + ((int)(palette[idx2][2] - palette[idx1][2]) * frac) / 255;
+              it[i] = Color(r, g, b);
+            }
+            phase = (phase + 3) & 0x3FF;
+      - addressable_lambda:
+          name: "Power Usage Traffic Light"
+          update_interval: 100ms
+          lambda: |-
+            float watts = 300.0f;
+            if (!std::isnan(id(powerusage).state)) {
+              watts = id(powerusage).state * 1000.0f;
+            }
+            if (watts < 0.0f) watts = 0.0f;
+            if (watts > 3000.0f) watts = 3000.0f;
+
+            uint8_t r, g, b;
+            if (watts <= 1000.0f) {
+              // 0..1000W: Soft Teal/Green (0, 200, 60) -> Warm Amber (255, 110, 0)
+              float t = watts / 1000.0f;
+              r = (uint8_t)(255.0f * t);
+              g = (uint8_t)(200.0f - 90.0f * t);
+              b = (uint8_t)(60.0f * (1.0f - t));
+            } else {
+              // 1000..3000W: Warm Amber (255, 110, 0) -> Deep Red (255, 0, 0)
+              float t = (watts - 1000.0f) / 2000.0f;
+              r = 255;
+              g = (uint8_t)(110.0f * (1.0f - t));
+              b = 0;
+            }
+            it.all() = Color(r, g, b);
+      - addressable_flicker:
+          name: "Vacuum Tube Flicker"
+          update_interval: 30ms
+          intensity: 10%
+      - addressable_lambda:
+          name: "Warm Nixie Ember"
+          update_interval: 35ms
+          lambda: |-
+            static uint8_t ember_val[6] = {200, 180, 220, 190, 210, 175};
+            for (int i = 0; i < it.size(); i++) {
+              int delta = (random_uint32() % 21) - 10; // -10..+10 random walk
+              int next = (int)ember_val[i] + delta;
+              if (next < 120) next = 120;
+              if (next > 255) next = 255;
+              ember_val[i] = (uint8_t)next;
+              // Warm neon/amber glow: R=full ember, G=scaled warmer at peaks, B=0
+              uint8_t r = ember_val[i];
+              uint8_t g = (uint8_t)((ember_val[i] - 100) * 55 / 155);
+              it[i] = Color(r, g, 0);
+            }
+      - addressable_lambda:
+          name: "Cyberpunk Neon Drift"
+          update_interval: 40ms
+          lambda: |-
+            static uint16_t phase = 0;
+            // High-contrast cool neon palette: Electric Cyan -> Royal Blue -> Ultraviolet -> Neon Magenta
+            const uint8_t palette[4][3] = {
+              {  0, 190, 255},
+              { 20,  30, 240},
+              {110,   0, 220},
+              {230,   0, 130}
+            };
+            for (int i = 0; i < it.size(); i++) {
+              uint16_t pos = (phase + i * 140) & 0x3FF;
+              uint8_t idx1 = (pos >> 8) & 0x03;
+              uint8_t idx2 = (idx1 + 1) & 0x03;
+              uint8_t frac = pos & 0xFF;
+              uint8_t r = palette[idx1][0] + ((int)(palette[idx2][0] - palette[idx1][0]) * frac) / 255;
+              uint8_t g = palette[idx1][1] + ((int)(palette[idx2][1] - palette[idx1][1]) * frac) / 255;
+              uint8_t b = palette[idx1][2] + ((int)(palette[idx2][2] - palette[idx1][2]) * frac) / 255;
+              it[i] = Color(r, g, b);
+            }
+            phase = (phase + 3) & 0x3FF;
+      - addressable_lambda:
+          name: "Aurora Borealis"
+          update_interval: 45ms
+          lambda: |-
+            static uint16_t t1 = 0;
+            static uint16_t t2 = 0;
+            const uint8_t palette[4][3] = {
+              {  0, 220, 110}, // Emerald green
+              {  0, 160, 210}, // Deep teal
+              { 40,  20, 200}, // Midnight blue
+              {140,   0, 180}  // Northern violet
+            };
+            for (int i = 0; i < it.size(); i++) {
+              // Dual incommensurate phases so the pattern never looks repetitive
+              uint16_t wave = (t1 + i * 173 + ((t2 * (i + 1)) >> 2)) & 0x3FF;
+              uint8_t idx1 = (wave >> 8) & 0x03;
+              uint8_t idx2 = (idx1 + 1) & 0x03;
+              uint8_t frac = wave & 0xFF;
+              uint8_t r = palette[idx1][0] + ((int)(palette[idx2][0] - palette[idx1][0]) * frac) / 255;
+              uint8_t g = palette[idx1][1] + ((int)(palette[idx2][1] - palette[idx1][1]) * frac) / 255;
+              uint8_t b = palette[idx1][2] + ((int)(palette[idx2][2] - palette[idx1][2]) * frac) / 255;
+              it[i] = Color(r, g, b);
+            }
+            t1 = (t1 + 2) & 0x3FF;
+            t2 = (t2 + 5) & 0x3FF;
+      - addressable_rainbow:
+          name: "Rainbow Effect With Custom Values"
+          speed: 3
+          width: 6
+      - addressable_color_wipe:
+
+switch:
+  - platform: template
+    name: "Nixie Crossfade"
+    id: nixie_crossfade
+    optimistic: true
+    restore_mode: ALWAYS_ON
+  - platform: template
+    name: "Nixie Test Cycle"
+    id: nixie_test_cycle
+    optimistic: true
+    restore_mode: ALWAYS_OFF
+
+interval:
+  - interval: 1s
+    then:
+      - if:
+          condition:
+            lambda: 'return id(nixie_test_cycle).state || id(display_mode).current_option() == "Test Cycle";'
+          then:
+            - lambda: |-
+                static int test_digit = 0;
+                int val = test_digit * 1111;
+                id(nixie_int).publish_state(val);
+                id(update_nixie_display).execute(val);
+                test_digit = (test_digit + 1) % 10;
+
+
