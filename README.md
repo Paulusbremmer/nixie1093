@@ -113,16 +113,16 @@ The 7-pin / 8-pin board header is ordered physically as:
 > [!IMPORTANT]
 > Connect the microcontroller's Data line to the **`DI` (Data In)** side of the first module. The **`DO` (Data Out)** header on the opposite end chains into `DI` of the next module.
 
-| Nixie / Control Pin | Function | Wemos S2 Mini (`nixie1093.yaml` / `-button.yaml`) | ESP32-C3 Mini (`nixie1093-c3.yaml`) | ESP32-C6 (Alternative) |
+| Nixie / Control Pin | Function | Wemos S2 Mini (`nixie1093.yaml` / `-button.yaml`) | ESP32-C3 SuperMini (`nixie1093-c3.yaml`) | ESP32-C6 (Alternative) |
 | :--- | :--- | :--- | :--- | :--- |
 | **HV** | High Voltage (~170V–180V DC) | *(180V HV Boost — **never** to ESP)* | *(180V HV Boost — **never** to ESP)* | *(180V HV Boost)* |
-| **LED** | WS2812B Data In | **`GPIO33`** | **`GPIO3`** | `GPIO18` |
-| **EN** | Shift Register Latch (`STCP`) | **`GPIO35`** | **`GPIO4`** | `GPIO19` |
-| **CLK** | Shift Register Clock (`SHCP`) | **`GPIO37`** | **`GPIO5`** | `GPIO20` |
-| **DI** | Shift Register Serial Data (`DS`) | **`GPIO39`** | **`GPIO6`** | `GPIO21` |
-| **5V** | 5V Logic & LED Power | **`VBUS`** (from 5V Buck Converter) | **`5V` / `VBUS`** | `5V` / `VBUS` |
+| **LED** | WS2812B Data In | **`GPIO33`** | **`GPIO4`** | `GPIO18` |
+| **EN** | Shift Register Latch (`STCP`) | **`GPIO35`** | **`GPIO3`** | `GPIO19` |
+| **CLK** | Shift Register Clock (`SHCP`) | **`GPIO37`** | **`GPIO2`** | `GPIO20` |
+| **DI** | Shift Register Serial Data (`DS`) | **`GPIO39`** | **`GPIO1`** | `GPIO21` |
+| **5V** | 5V Logic & LED Power | **`VBUS`** (from 5V Buck Converter) | **`5.5V` (`5V`)** | `5V` / `VBUS` |
 | **Ground** | Common Ground | **`G`** (`GND`) | **`GND`** | `GND` |
-| **Mode Pushbutton** *(Optional)* | Cycles Display Modes | **`GPIO18`** $\leftrightarrow$ **`G` (`GND`)** | **`GPIO7`** $\leftrightarrow$ **`GND`** | Any free GPIO $\leftrightarrow$ `GND` |
+| **Mode Pushbutton** *(Optional)* | Cycles Display Modes | **`GPIO18`** $\leftrightarrow$ **`G` (`GND`)** | **`GPIO0`** $\leftrightarrow$ **`GND`** | Any free GPIO $\leftrightarrow$ `GND` |
 
 *(No external resistor is needed for the pushbutton—`GPIO18` uses the ESP32's internal pull-up resistor and triggers when pulled to `GND`.)*
 
@@ -287,7 +287,7 @@ The **`IN-17`** (`9 mm` digits) is a miniature **top-view** tube (digits are vie
      ```bash
      esphome run nixie1093-button.yaml
      ```
-   - **ESP32-C3 Mini / SuperMini (`GPIO3`–`GPIO6` + optional button on `GPIO7`)**:
+   - **ESP32-C3 SuperMini (`GPIO4`–`GPIO1` + optional button on `GPIO0`, all on the same row as `5.5V` & `GND`)**:
      ```bash
      esphome run nixie1093-c3.yaml
      ```
@@ -300,7 +300,7 @@ The **`IN-17`** (`9 mm` digits) is a miniature **top-view** tube (digits are vie
 ```text
 ├── nixie1093.yaml          # Main ESPHome configuration for Wemos S2 Mini (Home Assistant control)
 ├── nixie1093-button.yaml   # Wemos S2 Mini configuration with GPIO18 pushbutton to cycle display modes
-├── nixie1093-c3.yaml       # ESP32-C3 Mini / SuperMini configuration (GPIO3-6 + GPIO7 mode button)
+├── nixie1093-c3.yaml       # ESP32-C3 SuperMini configuration (single-row: 5.5V, GND, GPIO4, 3, 2, 1, 0)
 ├── secrets.yaml.example    # Template for Wi-Fi and ESPHome credentials
 ├── images/
 │   ├── clock.jpg           # Photo of the assembled 4-tube Nixie clock
