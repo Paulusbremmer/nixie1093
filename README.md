@@ -113,16 +113,16 @@ The 7-pin / 8-pin board header is ordered physically as:
 > [!IMPORTANT]
 > Connect the microcontroller's Data line to the **`DI` (Data In)** side of the first module. The **`DO` (Data Out)** header on the opposite end chains into `DI` of the next module.
 
-| Nixie / Control Pin | Function | Wemos S2 Mini Pin | ESP32-C6 Pin (Alternative) |
-| :--- | :--- | :--- | :--- |
-| **HV** | High Voltage (~170V–180V DC) | *(Connected to 180V HV Boost — **never** to ESP)* | *(Connected to 180V HV Boost)* |
-| **LED** | WS2812B Data In | **`GPIO33`** | `GPIO18` |
-| **EN** | Shift Register Latch (`STCP`) | **`GPIO35`** | `GPIO19` |
-| **CLK** | Shift Register Clock (`SHCP`) | **`GPIO37`** | `GPIO20` |
-| **DI** | Shift Register Serial Data (`DS`) | **`GPIO39`** | `GPIO21` |
-| **5V** | 5V Logic & LED Power | **`VBUS`** (from 5V Buck Converter) | `5V` / `VBUS` |
-| **Ground** | Common Ground | **`G`** (`GND`) | `GND` |
-| **Mode Pushbutton** *(Optional)* | Cycles Display Modes (`nixie1093-button.yaml`) | **`GPIO18`** $\leftrightarrow$ **`G` (`GND`)** | Any free GPIO $\leftrightarrow$ `GND` |
+| Nixie / Control Pin | Function | Wemos S2 Mini (`nixie1093.yaml` / `-button.yaml`) | ESP32-C3 Mini (`nixie1093-c3.yaml`) | ESP32-C6 (Alternative) |
+| :--- | :--- | :--- | :--- | :--- |
+| **HV** | High Voltage (~170V–180V DC) | *(180V HV Boost — **never** to ESP)* | *(180V HV Boost — **never** to ESP)* | *(180V HV Boost)* |
+| **LED** | WS2812B Data In | **`GPIO33`** | **`GPIO3`** | `GPIO18` |
+| **EN** | Shift Register Latch (`STCP`) | **`GPIO35`** | **`GPIO4`** | `GPIO19` |
+| **CLK** | Shift Register Clock (`SHCP`) | **`GPIO37`** | **`GPIO5`** | `GPIO20` |
+| **DI** | Shift Register Serial Data (`DS`) | **`GPIO39`** | **`GPIO6`** | `GPIO21` |
+| **5V** | 5V Logic & LED Power | **`VBUS`** (from 5V Buck Converter) | **`5V` / `VBUS`** | `5V` / `VBUS` |
+| **Ground** | Common Ground | **`G`** (`GND`) | **`GND`** | `GND` |
+| **Mode Pushbutton** *(Optional)* | Cycles Display Modes | **`GPIO18`** $\leftrightarrow$ **`G` (`GND`)** | **`GPIO7`** $\leftrightarrow$ **`GND`** | Any free GPIO $\leftrightarrow$ `GND` |
 
 *(No external resistor is needed for the pushbutton—`GPIO18` uses the ESP32's internal pull-up resistor and triggers when pulled to `GND`.)*
 
@@ -279,13 +279,17 @@ The **`IN-17`** (`9 mm` digits) is a miniature **top-view** tube (digits are vie
    ap_password: "YOUR_FALLBACK_AP_PASSWORD"
    ```
 2. Choose your configuration and compile/upload with ESPHome:
-   - **Standard (Home Assistant mode control only)**:
+   - **Wemos S2 Mini — Standard (Home Assistant mode control only)**:
      ```bash
      esphome run nixie1093.yaml
      ```
-   - **With Physical Mode Pushbutton (`GPIO18` $\leftrightarrow$ `GND`)**:
+   - **Wemos S2 Mini — With Physical Mode Pushbutton (`GPIO18` $\leftrightarrow$ `GND`)**:
      ```bash
      esphome run nixie1093-button.yaml
+     ```
+   - **ESP32-C3 Mini / SuperMini (`GPIO3`–`GPIO6` + optional button on `GPIO7`)**:
+     ```bash
+     esphome run nixie1093-c3.yaml
      ```
 3. In Home Assistant, go to **Settings $\rightarrow$ Devices & Services $\rightarrow$ ESPHome**, add **Nixie1093**, and enable **"Allow the device to subscribe to Home Assistant states"** in its configuration so `Time` and `Power Usage` sync automatically.
 
@@ -294,11 +298,12 @@ The **`IN-17`** (`9 mm` digits) is a miniature **top-view** tube (digits are vie
 ## 📁 Repository Structure
 
 ```text
-├── nixie1093.yaml          # Main ESPHome configuration (Home Assistant control)
-├── nixie1093-button.yaml   # ESPHome configuration with GPIO18 pushbutton to cycle display modes
-├── secrets.yaml.example    # Template for Wi-Fi credentials
+├── nixie1093.yaml          # Main ESPHome configuration for Wemos S2 Mini (Home Assistant control)
+├── nixie1093-button.yaml   # Wemos S2 Mini configuration with GPIO18 pushbutton to cycle display modes
+├── nixie1093-c3.yaml       # ESP32-C3 Mini / SuperMini configuration (GPIO3-6 + GPIO7 mode button)
+├── secrets.yaml.example    # Template for Wi-Fi and ESPHome credentials
 ├── images/
-│   ├── clock.jpg           # Photo of the assembled 4-tube Z570M Nixie clock
+│   ├── clock.jpg           # Photo of the assembled 4-tube Nixie clock
 │   └── pcb.svg             # Vector preview of the TAF1317A 2-tube PCB layout
 └── TAF1317A/               # EasyEDA PCB design, BOM (CSV), & Gerber fabrication files
 ```
