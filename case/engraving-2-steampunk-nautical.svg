@@ -1,181 +1,284 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="465mm" height="235mm" viewBox="0 0 465 235">
-  <title>Steampunk Option 2: Nautical Jules Verne Chronometer</title>
-  <!-- Alignment Reference Guides (Set to Tool Layer / Do Not Output in LightBurn) -->
-  <g id="Layer_Alignment_Reference" stroke="#CCCCCC" stroke-dasharray="1.5,1.5" fill="none">
-    <path d="M 31.000 10.000 L 169.000 10.000 A 12.000 12.000 0 0 1 181.000 22.000 L 181.000 58.000 A 12.000 12.000 0 0 1 169.000 70.000 L 31.000 70.000 A 12.000 12.000 0 0 1 19.000 58.000 L 19.000 22.000 A 12.000 12.000 0 0 1 31.000 10.000 Z" stroke-width="0.15"/>
-    <circle cx="50.850" cy="50.760" r="10.000" fill="none" stroke="#CCCCCC" stroke-width="0.15"/>
-    <circle cx="76.150" cy="50.760" r="10.000" fill="none" stroke="#CCCCCC" stroke-width="0.15"/>
-    <circle cx="123.850" cy="50.760" r="10.000" fill="none" stroke="#CCCCCC" stroke-width="0.15"/>
-    <circle cx="149.150" cy="50.760" r="10.000" fill="none" stroke="#CCCCCC" stroke-width="0.15"/>
-    <rect x="103.000" y="158.000" width="36.000" height="50.000" fill="none" stroke="#CCCCCC" stroke-width="0.15"/>
-    <rect x="161.000" y="158.000" width="138.000" height="50.000" fill="none" stroke="#CCCCCC" stroke-width="0.15"/>
-    <rect x="321.000" y="158.000" width="36.000" height="50.000" fill="none" stroke="#CCCCCC" stroke-width="0.15"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="560mm" height="345mm"
+     viewBox="0 0 560 345">
+  <title>Nixie IN-8-2 Stacked Case + Steampunk Option 2: Nautical / Jules Verne Chronometer</title>
+  <desc>
+    Nixie IN-8-2 Low-Profile Stacked Rounded-Corner Case (3.0 mm Multiplex / MDF / Acryl) — ZERO BENDING REQUIRED!
+    - Outer Dimensions: 170.0 x 90.0 mm, R_out = 15.0 mm rounded corners
+    - Total Height: 21.0 mm (with 5 rings) or 24.0 mm (with 6 rings)
+    - Flush Drop-In Top Plate ("Los ingezette bovenplaat"): 164.0 x 84.0 mm, R = 12.0 mm
+    - 4x IN-8-2 Tube Holes (Ø 20.0 mm) & 8x TAF1317A M2 Mounting Holes (Ø 2.1 mm)
+    - 5x Hidden Ø 3.1 mm Alignment Dowel Holes in Layers 1..5 (for 3 mm wooden skewers/dowels — invisible from top & outside!)
+  </desc>
+
+  <!-- LAYER 01 (RED #FF0000): INNER HOLES & CAVITIES — CUT FIRST (100% THROUGH) -->
+  <g id="Layer_01_Inner_Holes_Cut_First" fill="none" stroke="#FF0000" stroke-width="0.15" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="48.850" cy="78.260" r="10.000"/>
+    <circle cx="74.150" cy="78.260" r="10.000"/>
+    <circle cx="121.850" cy="78.260" r="10.000"/>
+    <circle cx="147.150" cy="78.260" r="10.000"/>
+    <circle cx="36.150" cy="45.020" r="1.050"/>
+    <circle cx="36.150" cy="89.980" r="1.050"/>
+    <circle cx="94.700" cy="45.020" r="1.050"/>
+    <circle cx="94.700" cy="89.980" r="1.050"/>
+    <circle cx="109.150" cy="45.020" r="1.050"/>
+    <circle cx="109.150" cy="89.980" r="1.050"/>
+    <circle cx="167.700" cy="45.020" r="1.050"/>
+    <circle cx="167.700" cy="89.980" r="1.050"/>
+    <path d="M 210.000,13.900 L 350.000,13.900 A 12.100,12.100 0 0 1 362.100,26.000 L 362.100,86.000 A 12.100,12.100 0 0 1 350.000,98.100 L 210.000,98.100 A 12.100,12.100 0 0 1 197.900,86.000 L 197.900,26.000 A 12.100,12.100 0 0 1 210.000,13.900 Z"/>
+    <path d="M 392.000,18.000 L 532.000,18.000 A 8.000,8.000 0 0 1 540.000,26.000 L 540.000,86.000 A 8.000,8.000 0 0 1 532.000,94.000 L 392.000,94.000 A 8.000,8.000 0 0 1 384.000,86.000 L 384.000,26.000 A 8.000,8.000 0 0 1 392.000,18.000 Z"/>
+    <circle cx="19.870" cy="117.870" r="1.550"/>
+    <circle cx="176.130" cy="117.870" r="1.550"/>
+    <circle cx="19.870" cy="194.130" r="1.550"/>
+    <circle cx="176.130" cy="194.130" r="1.550"/>
+    <circle cx="98.000" cy="114.500" r="1.550"/>
+    <circle cx="201.870" cy="117.870" r="1.550"/>
+    <circle cx="358.130" cy="117.870" r="1.550"/>
+    <circle cx="201.870" cy="194.130" r="1.550"/>
+    <circle cx="358.130" cy="194.130" r="1.550"/>
+    <circle cx="280.000" cy="114.500" r="1.550"/>
+    <circle cx="383.870" cy="117.870" r="1.550"/>
+    <circle cx="540.130" cy="117.870" r="1.550"/>
+    <circle cx="383.870" cy="194.130" r="1.550"/>
+    <circle cx="540.130" cy="194.130" r="1.550"/>
+    <circle cx="462.000" cy="114.500" r="1.550"/>
+    <path d="M 392.000,118.000 L 532.000,118.000 A 8.000,8.000 0 0 1 540.000,126.000 L 540.000,186.000 A 8.000,8.000 0 0 1 532.000,194.000 L 392.000,194.000 A 8.000,8.000 0 0 1 384.000,186.000 L 384.000,126.000 A 8.000,8.000 0 0 1 392.000,118.000 Z"/>
+    <circle cx="19.870" cy="217.870" r="1.550"/>
+    <circle cx="176.130" cy="217.870" r="1.550"/>
+    <circle cx="19.870" cy="294.130" r="1.550"/>
+    <circle cx="176.130" cy="294.130" r="1.550"/>
+    <circle cx="98.000" cy="214.500" r="1.550"/>
+    <path d="M 28.000,218.000 L 168.000,218.000 A 8.000,8.000 0 0 1 176.000,226.000 L 176.000,286.000 A 8.000,8.000 0 0 1 168.000,294.000 L 28.000,294.000 A 8.000,8.000 0 0 1 20.000,286.000 L 20.000,226.000 A 8.000,8.000 0 0 1 28.000,218.000 Z"/>
+    <circle cx="201.870" cy="217.870" r="1.550"/>
+    <circle cx="358.130" cy="217.870" r="1.550"/>
+    <circle cx="201.870" cy="294.130" r="1.550"/>
+    <circle cx="358.130" cy="294.130" r="1.550"/>
+    <circle cx="280.000" cy="214.500" r="1.550"/>
+    <path d="M 210.000,218.000 L 350.000,218.000 A 8.000,8.000 0 0 1 358.000,226.000 L 358.000,286.000 A 8.000,8.000 0 0 1 350.000,294.000 L 210.000,294.000 A 8.000,8.000 0 0 1 202.000,286.000 L 202.000,226.000 A 8.000,8.000 0 0 1 210.000,218.000 Z"/>
+    <circle cx="383.870" cy="217.870" r="1.550"/>
+    <circle cx="540.130" cy="217.870" r="1.550"/>
+    <circle cx="383.870" cy="294.130" r="1.550"/>
+    <circle cx="540.130" cy="294.130" r="1.550"/>
+    <circle cx="462.000" cy="214.500" r="1.550"/>
+    <path d="M 410.000,225.000 L 410.000,225.000 A 2.000,2.000 0 0 1 412.000,227.000 L 412.000,241.000 A 2.000,2.000 0 0 1 410.000,243.000 L 410.000,243.000 A 2.000,2.000 0 0 1 408.000,241.000 L 408.000,227.000 A 2.000,2.000 0 0 1 410.000,225.000 Z"/>
+    <path d="M 423.000,225.000 L 423.000,225.000 A 2.000,2.000 0 0 1 425.000,227.000 L 425.000,241.000 A 2.000,2.000 0 0 1 423.000,243.000 L 423.000,243.000 A 2.000,2.000 0 0 1 421.000,241.000 L 421.000,227.000 A 2.000,2.000 0 0 1 423.000,225.000 Z"/>
+    <path d="M 462.000,225.000 L 462.000,225.000 A 2.000,2.000 0 0 1 464.000,227.000 L 464.000,241.000 A 2.000,2.000 0 0 1 462.000,243.000 L 462.000,243.000 A 2.000,2.000 0 0 1 460.000,241.000 L 460.000,227.000 A 2.000,2.000 0 0 1 462.000,225.000 Z"/>
+    <path d="M 501.000,225.000 L 501.000,225.000 A 2.000,2.000 0 0 1 503.000,227.000 L 503.000,241.000 A 2.000,2.000 0 0 1 501.000,243.000 L 501.000,243.000 A 2.000,2.000 0 0 1 499.000,241.000 L 499.000,227.000 A 2.000,2.000 0 0 1 501.000,225.000 Z"/>
+    <path d="M 514.000,225.000 L 514.000,225.000 A 2.000,2.000 0 0 1 516.000,227.000 L 516.000,241.000 A 2.000,2.000 0 0 1 514.000,243.000 L 514.000,243.000 A 2.000,2.000 0 0 1 512.000,241.000 L 512.000,227.000 A 2.000,2.000 0 0 1 514.000,225.000 Z"/>
   </g>
-  <!-- Engraving Layer (Green #00AA00) -->
-  <g id="Layer_03_Engrave" stroke="#00AA00" fill="none">
-    <path d="M 31.000 12.500 L 169.000 12.500 A 9.500 9.500 0 0 1 178.500 22.000 L 178.500 58.000 A 9.500 9.500 0 0 1 169.000 67.500 L 31.000 67.500 A 9.500 9.500 0 0 1 21.500 58.000 L 21.500 22.000 A 9.500 9.500 0 0 1 31.000 12.500 Z" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="50.850" cy="50.760" r="11.300" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <circle cx="50.850" cy="50.760" r="12.800" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="62.150" y1="50.760" x2="63.650" y2="50.760" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="60.636" y1="56.410" x2="61.935" y2="57.160" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="56.500" y1="60.546" x2="57.250" y2="61.845" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="50.850" y1="62.060" x2="50.850" y2="63.560" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="45.200" y1="60.546" x2="44.450" y2="61.845" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="41.064" y1="56.410" x2="39.765" y2="57.160" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="39.550" y1="50.760" x2="38.050" y2="50.760" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="41.064" y1="45.110" x2="39.765" y2="44.360" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="45.200" y1="40.974" x2="44.450" y2="39.675" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="50.850" y1="39.460" x2="50.850" y2="37.960" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="56.500" y1="40.974" x2="57.250" y2="39.675" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="60.636" y1="45.110" x2="61.935" y2="44.360" stroke="#00AA00" stroke-width="0.2"/>
-    <circle cx="76.150" cy="50.760" r="11.300" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <circle cx="76.150" cy="50.760" r="12.800" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="87.450" y1="50.760" x2="88.950" y2="50.760" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="85.936" y1="56.410" x2="87.235" y2="57.160" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="81.800" y1="60.546" x2="82.550" y2="61.845" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="76.150" y1="62.060" x2="76.150" y2="63.560" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="70.500" y1="60.546" x2="69.750" y2="61.845" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="66.364" y1="56.410" x2="65.065" y2="57.160" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="64.850" y1="50.760" x2="63.350" y2="50.760" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="66.364" y1="45.110" x2="65.065" y2="44.360" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="70.500" y1="40.974" x2="69.750" y2="39.675" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="76.150" y1="39.460" x2="76.150" y2="37.960" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="81.800" y1="40.974" x2="82.550" y2="39.675" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="85.936" y1="45.110" x2="87.235" y2="44.360" stroke="#00AA00" stroke-width="0.2"/>
-    <circle cx="123.850" cy="50.760" r="11.300" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <circle cx="123.850" cy="50.760" r="12.800" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="135.150" y1="50.760" x2="136.650" y2="50.760" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="133.636" y1="56.410" x2="134.935" y2="57.160" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="129.500" y1="60.546" x2="130.250" y2="61.845" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="123.850" y1="62.060" x2="123.850" y2="63.560" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="118.200" y1="60.546" x2="117.450" y2="61.845" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="114.064" y1="56.410" x2="112.765" y2="57.160" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="112.550" y1="50.760" x2="111.050" y2="50.760" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="114.064" y1="45.110" x2="112.765" y2="44.360" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="118.200" y1="40.974" x2="117.450" y2="39.675" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="123.850" y1="39.460" x2="123.850" y2="37.960" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="129.500" y1="40.974" x2="130.250" y2="39.675" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="133.636" y1="45.110" x2="134.935" y2="44.360" stroke="#00AA00" stroke-width="0.2"/>
-    <circle cx="149.150" cy="50.760" r="11.300" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <circle cx="149.150" cy="50.760" r="12.800" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="160.450" y1="50.760" x2="161.950" y2="50.760" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="158.936" y1="56.410" x2="160.235" y2="57.160" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="154.800" y1="60.546" x2="155.550" y2="61.845" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="149.150" y1="62.060" x2="149.150" y2="63.560" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="143.500" y1="60.546" x2="142.750" y2="61.845" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="139.364" y1="56.410" x2="138.065" y2="57.160" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="137.850" y1="50.760" x2="136.350" y2="50.760" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="139.364" y1="45.110" x2="138.065" y2="44.360" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="143.500" y1="40.974" x2="142.750" y2="39.675" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="149.150" y1="39.460" x2="149.150" y2="37.960" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="154.800" y1="40.974" x2="155.550" y2="39.675" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="158.936" y1="45.110" x2="160.235" y2="44.360" stroke="#00AA00" stroke-width="0.2"/>
-    <polygon points="100.000,43.260 101.800,48.960 107.500,50.760 101.800,52.560 100.000,58.260 98.200,52.560 92.500,50.760 98.200,48.960" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <circle cx="100.000" cy="50.760" r="2.800" fill="none" stroke="#00AA00" stroke-width="0.18"/>
-    <rect x="40.000" y="24.000" width="120.000" height="6.000" rx="3.000" ry="3.000" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="46.000" y1="30.000" x2="46.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="49.000" y1="30.000" x2="49.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="52.000" y1="30.000" x2="52.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="55.000" y1="30.000" x2="55.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="58.000" y1="30.000" x2="58.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="61.000" y1="30.000" x2="61.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="64.000" y1="30.000" x2="64.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="67.000" y1="30.000" x2="67.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="70.000" y1="30.000" x2="70.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="73.000" y1="30.000" x2="73.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="76.000" y1="30.000" x2="76.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="79.000" y1="30.000" x2="79.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="82.000" y1="30.000" x2="82.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="85.000" y1="30.000" x2="85.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="88.000" y1="30.000" x2="88.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="91.000" y1="30.000" x2="91.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="94.000" y1="30.000" x2="94.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="97.000" y1="30.000" x2="97.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="100.000" y1="30.000" x2="100.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="103.000" y1="30.000" x2="103.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="106.000" y1="30.000" x2="106.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="109.000" y1="30.000" x2="109.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="112.000" y1="30.000" x2="112.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="115.000" y1="30.000" x2="115.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="118.000" y1="30.000" x2="118.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="121.000" y1="30.000" x2="121.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="124.000" y1="30.000" x2="124.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="127.000" y1="30.000" x2="127.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="130.000" y1="30.000" x2="130.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="133.000" y1="30.000" x2="133.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="136.000" y1="30.000" x2="136.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="139.000" y1="30.000" x2="139.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="142.000" y1="30.000" x2="142.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="145.000" y1="30.000" x2="145.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="148.000" y1="30.000" x2="148.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="151.000" y1="30.000" x2="151.000" y2="28.600" stroke="#00AA00" stroke-width="0.18"/>
-    <line x1="154.000" y1="30.000" x2="154.000" y2="27.400" stroke="#00AA00" stroke-width="0.18"/>
-    <path d="M 168.000 162.000 L 292.000 162.000 A 4.000 4.000 0 0 1 296.000 166.000 L 296.000 200.000 A 4.000 4.000 0 0 1 292.000 204.000 L 168.000 204.000 A 4.000 4.000 0 0 1 164.000 200.000 L 164.000 166.000 A 4.000 4.000 0 0 1 168.000 162.000 Z" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="180.850" cy="183.000" r="6.500" fill="none" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="180.850" cy="183.000" r="8.200" fill="none" stroke="#00AA00" stroke-width="0.16"/>
-    <circle cx="188.200" cy="183.000" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="184.525" cy="189.365" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="177.175" cy="189.365" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="173.500" cy="183.000" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="177.175" cy="176.635" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="184.525" cy="176.635" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="180.850" cy="184.500" r="0.900" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="180.850" y1="184.500" x2="183.650" y2="179.500" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="206.150" cy="183.000" r="6.500" fill="none" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="206.150" cy="183.000" r="8.200" fill="none" stroke="#00AA00" stroke-width="0.16"/>
-    <circle cx="213.500" cy="183.000" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="209.825" cy="189.365" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="202.475" cy="189.365" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="198.800" cy="183.000" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="202.475" cy="176.635" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="209.825" cy="176.635" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="206.150" cy="184.500" r="0.900" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="206.150" y1="184.500" x2="208.950" y2="179.500" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="253.850" cy="183.000" r="6.500" fill="none" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="253.850" cy="183.000" r="8.200" fill="none" stroke="#00AA00" stroke-width="0.16"/>
-    <circle cx="261.200" cy="183.000" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="257.525" cy="189.365" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="250.175" cy="189.365" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="246.500" cy="183.000" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="250.175" cy="176.635" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="257.525" cy="176.635" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="253.850" cy="184.500" r="0.900" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="253.850" y1="184.500" x2="256.650" y2="179.500" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="279.150" cy="183.000" r="6.500" fill="none" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="279.150" cy="183.000" r="8.200" fill="none" stroke="#00AA00" stroke-width="0.16"/>
-    <circle cx="286.500" cy="183.000" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="282.825" cy="189.365" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="275.475" cy="189.365" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="271.800" cy="183.000" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="275.475" cy="176.635" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="282.825" cy="176.635" r="0.350" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="279.150" cy="184.500" r="0.900" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <line x1="279.150" y1="184.500" x2="281.950" y2="179.500" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="230.000" cy="183.000" r="10.500" fill="none" stroke="#00AA00" stroke-width="0.22"/>
-    <polygon points="230.000,174.500 232.000,181.000 238.500,183.000 232.000,185.000 230.000,191.500 228.000,185.000 221.500,183.000 228.000,181.000" fill="none" stroke="#00AA00" stroke-width="0.2"/>
-    <path d="M 108.500 162.000 L 133.500 162.000 A 3.500 3.500 0 0 1 137.000 165.500 L 137.000 200.500 A 3.500 3.500 0 0 1 133.500 204.000 L 108.500 204.000 A 3.500 3.500 0 0 1 105.000 200.500 L 105.000 165.500 A 3.500 3.500 0 0 1 108.500 162.000 Z" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="121.000" cy="183.000" r="8.500" fill="none" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="121.000" cy="183.000" r="10.800" fill="none" stroke="#00AA00" stroke-width="0.16"/>
-    <circle cx="130.650" cy="183.000" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="127.824" cy="189.824" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="121.000" cy="192.650" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="114.176" cy="189.824" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="111.350" cy="183.000" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="114.176" cy="176.176" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="121.000" cy="173.350" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="127.824" cy="176.176" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <polygon points="121.000,176.500 122.500,181.500 127.500,183.000 122.500,184.500 121.000,189.500 119.500,184.500 114.500,183.000 119.500,181.500" fill="none" stroke="#00AA00" stroke-width="0.18"/>
-    <path d="M 326.500 162.000 L 351.500 162.000 A 3.500 3.500 0 0 1 355.000 165.500 L 355.000 200.500 A 3.500 3.500 0 0 1 351.500 204.000 L 326.500 204.000 A 3.500 3.500 0 0 1 323.000 200.500 L 323.000 165.500 A 3.500 3.500 0 0 1 326.500 162.000 Z" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="339.000" cy="183.000" r="8.500" fill="none" stroke="#00AA00" stroke-width="0.22"/>
-    <circle cx="339.000" cy="183.000" r="10.800" fill="none" stroke="#00AA00" stroke-width="0.16"/>
-    <circle cx="348.650" cy="183.000" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="345.824" cy="189.824" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="339.000" cy="192.650" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="332.176" cy="189.824" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="329.350" cy="183.000" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="332.176" cy="176.176" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="339.000" cy="173.350" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <circle cx="345.824" cy="176.176" r="0.380" fill="none" stroke="#00AA00" stroke-width="0.15"/>
-    <polygon points="339.000,176.500 340.500,181.500 345.500,183.000 340.500,184.500 339.000,189.500 337.500,184.500 332.500,183.000 337.500,181.500" fill="none" stroke="#00AA00" stroke-width="0.18"/>
+
+  <!-- LAYER 02 (BLACK #000000): OUTER CONTOURS — CUT LAST (100% THROUGH) -->
+  <g id="Layer_02_Outer_Contours_Cut_Last" fill="none" stroke="#000000" stroke-width="0.18" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M 28.000,14.000 L 168.000,14.000 A 12.000,12.000 0 0 1 180.000,26.000 L 180.000,86.000 A 12.000,12.000 0 0 1 168.000,98.000 L 28.000,98.000 A 12.000,12.000 0 0 1 16.000,86.000 L 16.000,26.000 A 12.000,12.000 0 0 1 28.000,14.000 Z"/>
+    <path d="M 210.000,11.000 L 350.000,11.000 A 15.000,15.000 0 0 1 365.000,26.000 L 365.000,86.000 A 15.000,15.000 0 0 1 350.000,101.000 L 210.000,101.000 A 15.000,15.000 0 0 1 195.000,86.000 L 195.000,26.000 A 15.000,15.000 0 0 1 210.000,11.000 Z"/>
+    <path d="M 392.000,11.000 L 532.000,11.000 A 15.000,15.000 0 0 1 547.000,26.000 L 547.000,86.000 A 15.000,15.000 0 0 1 532.000,101.000 L 392.000,101.000 A 15.000,15.000 0 0 1 377.000,86.000 L 377.000,26.000 A 15.000,15.000 0 0 1 392.000,11.000 Z"/>
+    <path d="M 126.100,111.000 L 168.000,111.000 A 15.000,15.000 0 0 1 183.000,126.000 L 183.000,186.000 A 15.000,15.000 0 0 1 168.000,201.000 L 28.000,201.000 A 15.000,15.000 0 0 1 13.000,186.000 L 13.000,126.000 A 15.000,15.000 0 0 1 28.000,111.000 L 68.000,111.000 L 68.000,118.000 L 28.000,118.000 A 8.000,8.000 0 0 0 20.000,126.000 L 20.000,186.000 A 8.000,8.000 0 0 0 28.000,194.000 L 168.000,194.000 A 8.000,8.000 0 0 0 176.000,186.000 L 176.000,126.000 A 8.000,8.000 0 0 0 168.000,118.000 L 126.100,118.000 Z"/>
+    <path d="M 80.000,111.000 L 119.900,111.000 L 119.900,118.000 L 80.000,118.000 Z"/>
+    <path d="M 308.100,111.000 L 350.000,111.000 A 15.000,15.000 0 0 1 365.000,126.000 L 365.000,186.000 A 15.000,15.000 0 0 1 350.000,201.000 L 210.000,201.000 A 15.000,15.000 0 0 1 195.000,186.000 L 195.000,126.000 A 15.000,15.000 0 0 1 210.000,111.000 L 250.000,111.000 L 250.000,118.000 L 210.000,118.000 A 8.000,8.000 0 0 0 202.000,126.000 L 202.000,186.000 A 8.000,8.000 0 0 0 210.000,194.000 L 350.000,194.000 A 8.000,8.000 0 0 0 358.000,186.000 L 358.000,126.000 A 8.000,8.000 0 0 0 350.000,118.000 L 308.100,118.000 Z"/>
+    <path d="M 262.000,111.000 L 301.900,111.000 L 301.900,118.000 L 262.000,118.000 Z"/>
+    <path d="M 392.000,111.000 L 532.000,111.000 A 15.000,15.000 0 0 1 547.000,126.000 L 547.000,186.000 A 15.000,15.000 0 0 1 532.000,201.000 L 392.000,201.000 A 15.000,15.000 0 0 1 377.000,186.000 L 377.000,126.000 A 15.000,15.000 0 0 1 392.000,111.000 Z"/>
+    <path d="M 28.000,211.000 L 168.000,211.000 A 15.000,15.000 0 0 1 183.000,226.000 L 183.000,286.000 A 15.000,15.000 0 0 1 168.000,301.000 L 28.000,301.000 A 15.000,15.000 0 0 1 13.000,286.000 L 13.000,226.000 A 15.000,15.000 0 0 1 28.000,211.000 Z"/>
+    <path d="M 210.000,211.000 L 350.000,211.000 A 15.000,15.000 0 0 1 365.000,226.000 L 365.000,286.000 A 15.000,15.000 0 0 1 350.000,301.000 L 210.000,301.000 A 15.000,15.000 0 0 1 195.000,286.000 L 195.000,226.000 A 15.000,15.000 0 0 1 210.000,211.000 Z"/>
+    <path d="M 392.000,211.000 L 532.000,211.000 A 15.000,15.000 0 0 1 547.000,226.000 L 547.000,286.000 A 15.000,15.000 0 0 1 532.000,301.000 L 392.000,301.000 A 15.000,15.000 0 0 1 377.000,286.000 L 377.000,226.000 A 15.000,15.000 0 0 1 392.000,211.000 Z"/>
+    <path d="M 77.000,316.500 L 203.000,316.500 L 206.000,319.500 L 206.000,328.500 L 203.000,331.500 L 77.000,331.500 L 74.000,328.500 L 74.000,319.500 Z"/>
+    <path d="M 237.000,316.500 L 283.000,316.500 L 286.000,319.500 L 286.000,328.500 L 283.000,331.500 L 237.000,331.500 L 234.000,328.500 L 234.000,319.500 Z"/>
+    <path d="M 302.000,316.500 L 348.000,316.500 L 351.000,319.500 L 351.000,328.500 L 348.000,331.500 L 302.000,331.500 L 299.000,328.500 L 299.000,319.500 Z"/>
+  </g>
+
+  <!-- LAYER 03 (BLUE #0055FF): COMPONENT GUIDES & LABELS — DO NOT CUT (OUTPUT OFF) -->
+  <g id="Layer_03_Engrave_Guides_And_Labels" fill="none" stroke="#0055FF" stroke-width="0.12" stroke-dasharray="1.5,1.0">
+        <text x="48.85" y="79.26" font-family="Consolas, monospace" font-size="2.5" text-anchor="middle" fill="#0055FF" stroke="none">T1 Ø20</text>
+    <text x="74.15" y="79.26" font-family="Consolas, monospace" font-size="2.5" text-anchor="middle" fill="#0055FF" stroke="none">T2 Ø20</text>
+    <text x="121.85" y="79.26" font-family="Consolas, monospace" font-size="2.5" text-anchor="middle" fill="#0055FF" stroke="none">T3 Ø20</text>
+    <text x="147.15" y="79.26" font-family="Consolas, monospace" font-size="2.5" text-anchor="middle" fill="#0055FF" stroke="none">T4 Ø20</text>
+    <path d="M 35.065,43.495 L 168.785,43.495 A 0.500,0.500 0 0 1 169.285,43.995 L 169.285,91.005 A 0.500,0.500 0 0 1 168.785,91.505 L 35.065,91.505 A 0.500,0.500 0 0 1 34.565,91.005 L 34.565,43.995 A 0.500,0.500 0 0 1 35.065,43.495 Z"/>
+    <text x="98.00" y="21.00" font-family="Consolas, monospace" font-size="2.7" text-anchor="middle" fill="#0055FF" stroke="none">1. LOS INGEZETTE BOVENPLAAT (164 x 84 mm, R12) — GEEN BUIGING</text>
+    <text x="98.00" y="38.50" font-family="Consolas, monospace" font-size="2.3" text-anchor="middle" fill="#0055FF" stroke="none">ACHTERZIJDE: RUIMTE VOOR HV-BOOST / ESP32-C3 / BUCK / USB-C</text>
+    <text x="280.00" y="53.00" font-family="Consolas, monospace" font-size="2.7" text-anchor="middle" fill="#0055FF" stroke="none">2. LAAG 7: BOVENSTE BUITENRAND (170 x 90 mm, R15)</text>
+    <text x="280.00" y="59.00" font-family="Consolas, monospace" font-size="2.4" text-anchor="middle" fill="#0055FF" stroke="none">De bovenplaat (1) valt hier vlak (flush) in</text>
+    <text x="462.00" y="53.00" font-family="Consolas, monospace" font-size="2.7" text-anchor="middle" fill="#0055FF" stroke="none">3. LAAG 6: DRAAGRING ONDER BOVENPLAAT (170 x 90 mm)</text>
+    <text x="462.00" y="59.00" font-family="Consolas, monospace" font-size="2.3" text-anchor="middle" fill="#0055FF" stroke="none">Vormt 4 mm draagrand voor de losse bovenplaat (blinde deuvels)</text>
+    <text x="98.00" y="153.00" font-family="Consolas, monospace" font-size="2.5" text-anchor="middle" fill="#0055FF" stroke="none">4. LAAG 4: WANDRING MET USB-C (12x6) & KNOP (6.2x6) UITSPARING (1/2)</text>
+    <text x="74.00" y="122.50" font-family="Consolas, monospace" font-size="2.2" text-anchor="middle" fill="#0055FF" stroke="none">USB-C</text>
+    <text x="123.00" y="122.50" font-family="Consolas, monospace" font-size="2.2" text-anchor="middle" fill="#0055FF" stroke="none">BTN</text>
+    <text x="280.00" y="153.00" font-family="Consolas, monospace" font-size="2.5" text-anchor="middle" fill="#0055FF" stroke="none">5. LAAG 3: WANDRING MET USB-C (12x6) & KNOP (6.2x6) UITSPARING (2/2)</text>
+    <text x="256.00" y="122.50" font-family="Consolas, monospace" font-size="2.2" text-anchor="middle" fill="#0055FF" stroke="none">USB-C</text>
+    <text x="305.00" y="122.50" font-family="Consolas, monospace" font-size="2.2" text-anchor="middle" fill="#0055FF" stroke="none">BTN</text>
+    <text x="462.00" y="153.00" font-family="Consolas, monospace" font-size="2.5" text-anchor="middle" fill="#0055FF" stroke="none">6. LAAG 5: GESLOTEN WANDRING (170 x 90 mm, R15)</text>
+    <text x="462.00" y="159.00" font-family="Consolas, monospace" font-size="2.3" text-anchor="middle" fill="#0055FF" stroke="none">Met 5x Ø3.1 mm blinde uitlijngaten (voor 3mm prikker/deuvel)</text>
+    <text x="98.00" y="253.00" font-family="Consolas, monospace" font-size="2.5" text-anchor="middle" fill="#0055FF" stroke="none">7. LAAG 2: GESLOTEN WANDRING (170 x 90 mm, R15)</text>
+    <text x="98.00" y="259.00" font-family="Consolas, monospace" font-size="2.3" text-anchor="middle" fill="#0055FF" stroke="none">Sluit de USB-C & drukknop poort aan de onderzijde</text>
+    <text x="280.00" y="253.00" font-family="Consolas, monospace" font-size="2.5" text-anchor="middle" fill="#0055FF" stroke="none">8. OPTIONELE EXTRA WANDRING (+3 mm hoogte)</text>
+    <text x="280.00" y="259.00" font-family="Consolas, monospace" font-size="2.3" text-anchor="middle" fill="#0055FF" stroke="none">Gebruik 5 ringen voor 21 mm hoogte of 6 ringen voor 24 mm hoogte</text>
+    <path d="M 433.000,218.000 L 443.000,218.000 A 1.000,1.000 0 0 1 444.000,219.000 L 444.000,233.000 A 1.000,1.000 0 0 1 443.000,234.000 L 433.000,234.000 A 1.000,1.000 0 0 1 432.000,233.000 L 432.000,219.000 A 1.000,1.000 0 0 1 433.000,218.000 Z"/>
+    <text x="438.00" y="227.00" font-family="Consolas, monospace" font-size="2.0" text-anchor="middle" fill="#0055FF" stroke="none">USB-C PD</text>
+    <path d="M 484.000,220.000 L 490.000,220.000 A 1.000,1.000 0 0 1 491.000,221.000 L 491.000,227.000 A 1.000,1.000 0 0 1 490.000,228.000 L 484.000,228.000 A 1.000,1.000 0 0 1 483.000,227.000 L 483.000,221.000 A 1.000,1.000 0 0 1 484.000,220.000 Z"/>
+    <text x="487.00" y="234.00" font-family="Consolas, monospace" font-size="2.0" text-anchor="middle" fill="#0055FF" stroke="none">BUTTON</text>
+    <path d="M 389.000,222.000 L 431.000,222.000 A 1.500,1.500 0 0 1 432.500,223.500 L 432.500,250.500 A 1.500,1.500 0 0 1 431.000,252.000 L 389.000,252.000 A 1.500,1.500 0 0 1 387.500,250.500 L 387.500,223.500 A 1.500,1.500 0 0 1 389.000,222.000 Z"/>
+    <text x="410.00" y="238.00" font-family="Consolas, monospace" font-size="2.1" text-anchor="middle" fill="#0055FF" stroke="none">180V HV BOOST</text>
+    <path d="M 452.500,225.500 L 471.500,225.500 A 1.500,1.500 0 0 1 473.000,227.000 L 473.000,241.000 A 1.500,1.500 0 0 1 471.500,242.500 L 452.500,242.500 A 1.500,1.500 0 0 1 451.000,241.000 L 451.000,227.000 A 1.500,1.500 0 0 1 452.500,225.500 Z"/>
+    <text x="462.00" y="235.00" font-family="Consolas, monospace" font-size="2.0" text-anchor="middle" fill="#0055FF" stroke="none">5V BUCK</text>
+    <path d="M 503.500,228.000 L 524.500,228.000 A 1.500,1.500 0 0 1 526.000,229.500 L 526.000,244.500 A 1.500,1.500 0 0 1 524.500,246.000 L 503.500,246.000 A 1.500,1.500 0 0 1 502.000,244.500 L 502.000,229.500 A 1.500,1.500 0 0 1 503.500,228.000 Z"/>
+    <text x="514.00" y="238.00" font-family="Consolas, monospace" font-size="2.1" text-anchor="middle" fill="#0055FF" stroke="none">ESP32-C3 MINI</text>
+    <path d="M 399.065,243.495 L 532.785,243.495 A 0.500,0.500 0 0 1 533.285,243.995 L 533.285,291.005 A 0.500,0.500 0 0 1 532.785,291.505 L 399.065,291.505 A 0.500,0.500 0 0 1 398.565,291.005 L 398.565,243.995 A 0.500,0.500 0 0 1 399.065,243.495 Z"/>
+    <text x="462.00" y="272.00" font-family="Consolas, monospace" font-size="2.6" text-anchor="middle" fill="#0055FF" stroke="none">9. LAAG 1: BODEMPLAAT (170 x 90 mm, R15) — GEEN BUIGING</text>
+    <text x="462.00" y="279.00" font-family="Consolas, monospace" font-size="2.3" text-anchor="middle" fill="#0055FF" stroke="none">Modules liggen vlak achter/onder de achterrand van de Nixie-PCB</text>
+    <text x="140.00" y="336.00" font-family="Consolas, monospace" font-size="2.3" text-anchor="middle" fill="#0055FF" stroke="none">OPTIONEEL VOORPANEEL (132 x 15 mm) — Lijm vlak tussen de R15 hoeken</text>
+    <text x="292.50" y="336.00" font-family="Consolas, monospace" font-size="2.3" text-anchor="middle" fill="#0055FF" stroke="none">OPTIONELE ZIJPANELEN L+R (2x 52 x 15 mm) — Geen buiging nodig</text>
+  </g>
+
+  <!-- LAYER 05 (PURPLE #800080): STEAMPUNK OPTION 2 — NAUTICAL / JULES VERNE CHRONOMETER (LINE SCORE) -->
+  <g id="Layer_05_Engraving_Option_2_Steampunk_Nautical" fill="none" stroke="#800080" stroke-width="0.16" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M 28.000,16.500 L 168.000,16.500 A 9.500,9.500 0 0 1 177.500,26.000 L 177.500,86.000 A 9.500,9.500 0 0 1 168.000,95.500 L 28.000,95.500 A 9.500,9.500 0 0 1 18.500,86.000 L 18.500,26.000 A 9.500,9.500 0 0 1 28.000,16.500 Z"/>
+    <path d="M 28.000,18.000 L 168.000,18.000 A 8.000,8.000 0 0 1 176.000,26.000 L 176.000,86.000 A 8.000,8.000 0 0 1 168.000,94.000 L 28.000,94.000 A 8.000,8.000 0 0 1 20.000,86.000 L 20.000,26.000 A 8.000,8.000 0 0 1 28.000,18.000 Z"/>
+    <circle cx="48.850" cy="78.260" r="11.400"/>
+    <circle cx="48.850" cy="78.260" r="13.000"/>
+    <line x1="60.250" y1="78.260" x2="61.850" y2="78.260"/>
+    <circle cx="59.416" cy="84.360" r="0.450"/>
+    <circle cx="54.950" cy="88.826" r="0.450"/>
+    <line x1="48.850" y1="89.660" x2="48.850" y2="91.260"/>
+    <circle cx="42.750" cy="88.826" r="0.450"/>
+    <circle cx="38.284" cy="84.360" r="0.450"/>
+    <line x1="37.450" y1="78.260" x2="35.850" y2="78.260"/>
+    <circle cx="38.284" cy="72.160" r="0.450"/>
+    <circle cx="42.750" cy="67.694" r="0.450"/>
+    <line x1="48.850" y1="66.860" x2="48.850" y2="65.260"/>
+    <circle cx="54.950" cy="67.694" r="0.450"/>
+    <circle cx="59.416" cy="72.160" r="0.450"/>
+    <circle cx="74.150" cy="78.260" r="11.400"/>
+    <circle cx="74.150" cy="78.260" r="13.000"/>
+    <line x1="85.550" y1="78.260" x2="87.150" y2="78.260"/>
+    <circle cx="84.716" cy="84.360" r="0.450"/>
+    <circle cx="80.250" cy="88.826" r="0.450"/>
+    <line x1="74.150" y1="89.660" x2="74.150" y2="91.260"/>
+    <circle cx="68.050" cy="88.826" r="0.450"/>
+    <circle cx="63.584" cy="84.360" r="0.450"/>
+    <line x1="62.750" y1="78.260" x2="61.150" y2="78.260"/>
+    <circle cx="63.584" cy="72.160" r="0.450"/>
+    <circle cx="68.050" cy="67.694" r="0.450"/>
+    <line x1="74.150" y1="66.860" x2="74.150" y2="65.260"/>
+    <circle cx="80.250" cy="67.694" r="0.450"/>
+    <circle cx="84.716" cy="72.160" r="0.450"/>
+    <circle cx="121.850" cy="78.260" r="11.400"/>
+    <circle cx="121.850" cy="78.260" r="13.000"/>
+    <line x1="133.250" y1="78.260" x2="134.850" y2="78.260"/>
+    <circle cx="132.416" cy="84.360" r="0.450"/>
+    <circle cx="127.950" cy="88.826" r="0.450"/>
+    <line x1="121.850" y1="89.660" x2="121.850" y2="91.260"/>
+    <circle cx="115.750" cy="88.826" r="0.450"/>
+    <circle cx="111.284" cy="84.360" r="0.450"/>
+    <line x1="110.450" y1="78.260" x2="108.850" y2="78.260"/>
+    <circle cx="111.284" cy="72.160" r="0.450"/>
+    <circle cx="115.750" cy="67.694" r="0.450"/>
+    <line x1="121.850" y1="66.860" x2="121.850" y2="65.260"/>
+    <circle cx="127.950" cy="67.694" r="0.450"/>
+    <circle cx="132.416" cy="72.160" r="0.450"/>
+    <circle cx="147.150" cy="78.260" r="11.400"/>
+    <circle cx="147.150" cy="78.260" r="13.000"/>
+    <line x1="158.550" y1="78.260" x2="160.150" y2="78.260"/>
+    <circle cx="157.716" cy="84.360" r="0.450"/>
+    <circle cx="153.250" cy="88.826" r="0.450"/>
+    <line x1="147.150" y1="89.660" x2="147.150" y2="91.260"/>
+    <circle cx="141.050" cy="88.826" r="0.450"/>
+    <circle cx="136.584" cy="84.360" r="0.450"/>
+    <line x1="135.750" y1="78.260" x2="134.150" y2="78.260"/>
+    <circle cx="136.584" cy="72.160" r="0.450"/>
+    <circle cx="141.050" cy="67.694" r="0.450"/>
+    <line x1="147.150" y1="66.860" x2="147.150" y2="65.260"/>
+    <circle cx="153.250" cy="67.694" r="0.450"/>
+    <circle cx="157.716" cy="72.160" r="0.450"/>
+    <circle cx="98.000" cy="78.260" r="8.200"/>
+    <circle cx="98.000" cy="78.260" r="6.800"/>
+    <path d="M 98.000,78.260 L 99.956,77.844 L 106.000,78.260 L 99.956,78.676 Z"/>
+    <path d="M 98.000,78.260 L 99.677,79.349 L 101.889,82.149 L 99.089,79.937 Z"/>
+    <path d="M 98.000,78.260 L 98.416,80.216 L 98.000,86.260 L 97.584,80.216 Z"/>
+    <path d="M 98.000,78.260 L 96.911,79.937 L 94.111,82.149 L 96.323,79.349 Z"/>
+    <path d="M 98.000,78.260 L 96.044,78.676 L 90.000,78.260 L 96.044,77.844 Z"/>
+    <path d="M 98.000,78.260 L 96.323,77.171 L 94.111,74.371 L 96.911,76.583 Z"/>
+    <path d="M 98.000,78.260 L 97.584,76.304 L 98.000,70.260 L 98.416,76.304 Z"/>
+    <path d="M 98.000,78.260 L 99.089,76.583 L 101.889,74.371 L 99.677,77.171 Z"/>
+    <path d="M 37.000,25.500 L 159.000,25.500 A 6.000,6.000 0 0 1 165.000,31.500 L 165.000,45.500 A 6.000,6.000 0 0 1 159.000,51.500 L 37.000,51.500 A 6.000,6.000 0 0 1 31.000,45.500 L 31.000,31.500 A 6.000,6.000 0 0 1 37.000,25.500 Z"/>
+    <circle cx="56.000" cy="38.500" r="9.800"/>
+    <circle cx="56.000" cy="38.500" r="8.400"/>
+    <circle cx="56.000" cy="38.500" r="1.400"/>
+    <line x1="49.303" y1="39.681" x2="47.728" y2="39.959"/>
+    <line x1="49.432" y1="36.740" x2="47.886" y2="36.326"/>
+    <line x1="50.791" y1="34.129" x2="49.565" y2="33.101"/>
+    <line x1="53.126" y1="32.337" x2="52.450" y2="30.887"/>
+    <line x1="56.000" y1="31.700" x2="56.000" y2="30.100"/>
+    <line x1="58.874" y1="32.337" x2="59.550" y2="30.887"/>
+    <line x1="61.209" y1="34.129" x2="62.435" y2="33.101"/>
+    <line x1="62.568" y1="36.740" x2="64.114" y2="36.326"/>
+    <line x1="62.697" y1="39.681" x2="64.272" y2="39.959"/>
+    <line x1="56.000" y1="38.500" x2="58.747" y2="32.609"/>
+    <circle cx="98.000" cy="38.500" r="9.800"/>
+    <circle cx="98.000" cy="38.500" r="8.400"/>
+    <circle cx="98.000" cy="38.500" r="1.400"/>
+    <line x1="91.303" y1="39.681" x2="89.728" y2="39.959"/>
+    <line x1="91.432" y1="36.740" x2="89.886" y2="36.326"/>
+    <line x1="92.791" y1="34.129" x2="91.565" y2="33.101"/>
+    <line x1="95.126" y1="32.337" x2="94.450" y2="30.887"/>
+    <line x1="98.000" y1="31.700" x2="98.000" y2="30.100"/>
+    <line x1="100.874" y1="32.337" x2="101.550" y2="30.887"/>
+    <line x1="103.209" y1="34.129" x2="104.435" y2="33.101"/>
+    <line x1="104.568" y1="36.740" x2="106.114" y2="36.326"/>
+    <line x1="104.697" y1="39.681" x2="106.272" y2="39.959"/>
+    <line x1="98.000" y1="38.500" x2="95.777" y2="32.392"/>
+    <circle cx="140.000" cy="38.500" r="9.800"/>
+    <circle cx="140.000" cy="38.500" r="8.400"/>
+    <circle cx="140.000" cy="38.500" r="1.400"/>
+    <line x1="133.303" y1="39.681" x2="131.728" y2="39.959"/>
+    <line x1="133.432" y1="36.740" x2="131.886" y2="36.326"/>
+    <line x1="134.791" y1="34.129" x2="133.565" y2="33.101"/>
+    <line x1="137.126" y1="32.337" x2="136.450" y2="30.887"/>
+    <line x1="140.000" y1="31.700" x2="140.000" y2="30.100"/>
+    <line x1="142.874" y1="32.337" x2="143.550" y2="30.887"/>
+    <line x1="145.209" y1="34.129" x2="146.435" y2="33.101"/>
+    <line x1="146.568" y1="36.740" x2="148.114" y2="36.326"/>
+    <line x1="146.697" y1="39.681" x2="148.272" y2="39.959"/>
+    <line x1="140.000" y1="38.500" x2="142.747" y2="32.609"/>
+    <line x1="88.200" y1="36.500" x2="65.800" y2="36.500"/>
+    <line x1="88.200" y1="40.500" x2="65.800" y2="40.500"/>
+    <line x1="107.800" y1="36.500" x2="130.200" y2="36.500"/>
+    <line x1="107.800" y1="40.500" x2="130.200" y2="40.500"/>
+    <path d="M 78.200,317.700 L 201.800,317.700 A 3.000,3.000 0 0 1 204.800,320.700 L 204.800,327.300 A 3.000,3.000 0 0 1 201.800,330.300 L 78.200,330.300 A 3.000,3.000 0 0 1 75.200,327.300 L 75.200,320.700 A 3.000,3.000 0 0 1 78.200,317.700 Z"/>
+    <circle cx="90.850" cy="324.000" r="5.200"/>
+    <circle cx="90.850" cy="324.000" r="4.200"/>
+    <line x1="90.850" y1="324.000" x2="93.450" y2="321.800"/>
+    <circle cx="116.150" cy="324.000" r="5.200"/>
+    <circle cx="116.150" cy="324.000" r="4.200"/>
+    <line x1="116.150" y1="324.000" x2="118.750" y2="321.800"/>
+    <circle cx="163.850" cy="324.000" r="5.200"/>
+    <circle cx="163.850" cy="324.000" r="4.200"/>
+    <line x1="163.850" y1="324.000" x2="166.450" y2="321.800"/>
+    <circle cx="189.150" cy="324.000" r="5.200"/>
+    <circle cx="189.150" cy="324.000" r="4.200"/>
+    <line x1="189.150" y1="324.000" x2="191.750" y2="321.800"/>
+    <line x1="105.000" y1="324.000" x2="110.500" y2="324.000"/>
+    <line x1="122.000" y1="324.000" x2="158.000" y2="324.000"/>
+    <line x1="169.500" y1="324.000" x2="175.000" y2="324.000"/>
+    <path d="M 238.200,317.700 L 281.800,317.700 A 3.000,3.000 0 0 1 284.800,320.700 L 284.800,327.300 A 3.000,3.000 0 0 1 281.800,330.300 L 238.200,330.300 A 3.000,3.000 0 0 1 235.200,327.300 L 235.200,320.700 A 3.000,3.000 0 0 1 238.200,317.700 Z"/>
+    <circle cx="260.000" cy="324.000" r="5.400"/>
+    <circle cx="260.000" cy="324.000" r="4.000"/>
+    <circle cx="264.700" cy="324.000" r="0.350"/>
+    <circle cx="262.350" cy="328.070" r="0.350"/>
+    <circle cx="257.650" cy="328.070" r="0.350"/>
+    <circle cx="255.300" cy="324.000" r="0.350"/>
+    <circle cx="257.650" cy="319.930" r="0.350"/>
+    <circle cx="262.350" cy="319.930" r="0.350"/>
+    <line x1="240.000" y1="324.000" x2="253.500" y2="324.000"/>
+    <line x1="266.500" y1="324.000" x2="280.000" y2="324.000"/>
+    <path d="M 303.200,317.700 L 346.800,317.700 A 3.000,3.000 0 0 1 349.800,320.700 L 349.800,327.300 A 3.000,3.000 0 0 1 346.800,330.300 L 303.200,330.300 A 3.000,3.000 0 0 1 300.200,327.300 L 300.200,320.700 A 3.000,3.000 0 0 1 303.200,317.700 Z"/>
+    <circle cx="325.000" cy="324.000" r="5.400"/>
+    <circle cx="325.000" cy="324.000" r="4.000"/>
+    <circle cx="329.700" cy="324.000" r="0.350"/>
+    <circle cx="327.350" cy="328.070" r="0.350"/>
+    <circle cx="322.650" cy="328.070" r="0.350"/>
+    <circle cx="320.300" cy="324.000" r="0.350"/>
+    <circle cx="322.650" cy="319.930" r="0.350"/>
+    <circle cx="327.350" cy="319.930" r="0.350"/>
+    <line x1="305.000" y1="324.000" x2="318.500" y2="324.000"/>
+    <line x1="331.500" y1="324.000" x2="345.000" y2="324.000"/>
   </g>
 </svg>
