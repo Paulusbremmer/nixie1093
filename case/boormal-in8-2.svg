@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="210mm" height="260mm"
+     viewBox="0 0 210 260">
+  <title>Nixie IN-8-2 1:1 Boormal &amp; Markeersjabloon (Voor Massief Houten Behuizing)</title>
+  <desc>
+    1:1 Boormal voor 4x IN-8-2 Nixie buizen op 2 gekoppelde TAF1317A printplaten:
+    - Buisdiameter: Ø 19.0 mm (Aanbevolen boorgat: Ø 20.0 mm Forstnerboor / kunstboor)
+    - Hart-op-hart afstanden:
+        Buis 1 naar Buis 2 : 25.30 mm
+        Buis 2 naar Buis 3 : 47.70 mm
+        Buis 3 naar Buis 4 : 25.30 mm
+        Buis 1 naar Buis 4 : 98.30 mm (totaal hart-op-hart)
+    - X-posities vanuit het exacte midden (0.00 mm): -49.15 mm, -23.85 mm, +23.85 mm, +49.15 mm
+  </desc>
+
+  <!-- LAYER 01 (RED #FF0000): PILOT HOLES (MAL 1: Ø1.2mm) & FULL BORE HOLES (MAL 2: Ø20.0mm) -->
+  <g id="Layer_01_Drill_Centers_And_Holes" fill="none" stroke="#FF0000" stroke-width="0.18" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="55.850" cy="72.000" r="0.600"/>
+    <circle cx="81.150" cy="72.000" r="0.600"/>
+    <circle cx="128.850" cy="72.000" r="0.600"/>
+    <circle cx="154.150" cy="72.000" r="0.600"/>
+    <circle cx="43.150" cy="38.760" r="0.600"/>
+    <circle cx="43.150" cy="83.720" r="0.600"/>
+    <circle cx="101.700" cy="38.760" r="0.600"/>
+    <circle cx="101.700" cy="83.720" r="0.600"/>
+    <circle cx="116.150" cy="38.760" r="0.600"/>
+    <circle cx="116.150" cy="83.720" r="0.600"/>
+    <circle cx="174.700" cy="38.760" r="0.600"/>
+    <circle cx="174.700" cy="83.720" r="0.600"/>
+    <circle cx="55.850" cy="196.000" r="10.000"/>
+    <circle cx="81.150" cy="196.000" r="10.000"/>
+    <circle cx="128.850" cy="196.000" r="10.000"/>
+    <circle cx="154.150" cy="196.000" r="10.000"/>
+    <circle cx="43.150" cy="162.760" r="1.050"/>
+    <circle cx="43.150" cy="207.720" r="1.050"/>
+    <circle cx="101.700" cy="162.760" r="1.050"/>
+    <circle cx="101.700" cy="207.720" r="1.050"/>
+    <circle cx="116.150" cy="162.760" r="1.050"/>
+    <circle cx="116.150" cy="207.720" r="1.050"/>
+    <circle cx="174.700" cy="162.760" r="1.050"/>
+    <circle cx="174.700" cy="207.720" r="1.050"/>
+  </g>
+
+  <!-- LAYER 02 (BLACK #000000): OUTER JIG CONTOUR (168 x 78 mm, R15) -->
+  <g id="Layer_02_Template_Outer_Border" fill="none" stroke="#000000" stroke-width="0.20" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M 36.000,27.000 L 174.000,27.000 A 15.000,15.000 0 0 1 189.000,42.000 L 189.000,90.000 A 15.000,15.000 0 0 1 174.000,105.000 L 36.000,105.000 A 15.000,15.000 0 0 1 21.000,90.000 L 21.000,42.000 A 15.000,15.000 0 0 1 36.000,27.000 Z"/>
+    <path d="M 36.000,151.000 L 174.000,151.000 A 15.000,15.000 0 0 1 189.000,166.000 L 189.000,214.000 A 15.000,15.000 0 0 1 174.000,229.000 L 36.000,229.000 A 15.000,15.000 0 0 1 21.000,214.000 L 21.000,166.000 A 15.000,15.000 0 0 1 36.000,151.000 Z"/>
+  </g>
+
+  <!-- LAYER 03 (TEAL #008080): CENTER CROSSHAIRS, Ø20/Ø19 CIRCLES & PCB POCKET OUTLINE (SCORE) -->
+  <g id="Layer_03_Crosshairs_And_Tube_Circles" fill="none" stroke="#008080" stroke-width="0.15" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="23.000" y1="72.000" x2="187.000" y2="72.000"/>
+    <line x1="105.000" y1="29.000" x2="105.000" y2="103.000"/>
+    <circle cx="55.850" cy="72.000" r="0.200"/>
+    <line x1="43.850" y1="72.000" x2="67.850" y2="72.000"/>
+    <line x1="55.850" y1="60.000" x2="55.850" y2="84.000"/>
+    <circle cx="55.850" cy="72.000" r="10.000"/>
+    <circle cx="55.850" cy="72.000" r="9.500"/>
+    <circle cx="81.150" cy="72.000" r="0.200"/>
+    <line x1="69.150" y1="72.000" x2="93.150" y2="72.000"/>
+    <line x1="81.150" y1="60.000" x2="81.150" y2="84.000"/>
+    <circle cx="81.150" cy="72.000" r="10.000"/>
+    <circle cx="81.150" cy="72.000" r="9.500"/>
+    <circle cx="128.850" cy="72.000" r="0.200"/>
+    <line x1="116.850" y1="72.000" x2="140.850" y2="72.000"/>
+    <line x1="128.850" y1="60.000" x2="128.850" y2="84.000"/>
+    <circle cx="128.850" cy="72.000" r="10.000"/>
+    <circle cx="128.850" cy="72.000" r="9.500"/>
+    <circle cx="154.150" cy="72.000" r="0.200"/>
+    <line x1="142.150" y1="72.000" x2="166.150" y2="72.000"/>
+    <line x1="154.150" y1="60.000" x2="154.150" y2="84.000"/>
+    <circle cx="154.150" cy="72.000" r="10.000"/>
+    <circle cx="154.150" cy="72.000" r="9.500"/>
+    <circle cx="43.150" cy="38.760" r="1.050"/>
+    <line x1="40.950" y1="38.760" x2="45.350" y2="38.760"/>
+    <line x1="43.150" y1="36.560" x2="43.150" y2="40.960"/>
+    <circle cx="43.150" cy="83.720" r="1.050"/>
+    <line x1="40.950" y1="83.720" x2="45.350" y2="83.720"/>
+    <line x1="43.150" y1="81.520" x2="43.150" y2="85.920"/>
+    <circle cx="101.700" cy="38.760" r="1.050"/>
+    <line x1="99.500" y1="38.760" x2="103.900" y2="38.760"/>
+    <line x1="101.700" y1="36.560" x2="101.700" y2="40.960"/>
+    <circle cx="101.700" cy="83.720" r="1.050"/>
+    <line x1="99.500" y1="83.720" x2="103.900" y2="83.720"/>
+    <line x1="101.700" y1="81.520" x2="101.700" y2="85.920"/>
+    <circle cx="116.150" cy="38.760" r="1.050"/>
+    <line x1="113.950" y1="38.760" x2="118.350" y2="38.760"/>
+    <line x1="116.150" y1="36.560" x2="116.150" y2="40.960"/>
+    <circle cx="116.150" cy="83.720" r="1.050"/>
+    <line x1="113.950" y1="83.720" x2="118.350" y2="83.720"/>
+    <line x1="116.150" y1="81.520" x2="116.150" y2="85.920"/>
+    <circle cx="174.700" cy="38.760" r="1.050"/>
+    <line x1="172.500" y1="38.760" x2="176.900" y2="38.760"/>
+    <line x1="174.700" y1="36.560" x2="174.700" y2="40.960"/>
+    <circle cx="174.700" cy="83.720" r="1.050"/>
+    <line x1="172.500" y1="83.720" x2="176.900" y2="83.720"/>
+    <line x1="174.700" y1="81.520" x2="174.700" y2="85.920"/>
+    <path d="M 42.070,37.230 L 175.790,37.230 A 0.500,0.500 0 0 1 176.290,37.730 L 176.290,84.740 A 0.500,0.500 0 0 1 175.790,85.240 L 42.070,85.240 A 0.500,0.500 0 0 1 41.570,84.740 L 41.570,37.730 A 0.500,0.500 0 0 1 42.070,37.230 Z"/>
+    <line x1="23.000" y1="196.000" x2="187.000" y2="196.000"/>
+    <line x1="105.000" y1="153.000" x2="105.000" y2="227.000"/>
+    <circle cx="55.850" cy="196.000" r="0.300"/>
+    <line x1="52.850" y1="196.000" x2="58.850" y2="196.000"/>
+    <line x1="55.850" y1="193.000" x2="55.850" y2="199.000"/>
+    <circle cx="81.150" cy="196.000" r="0.300"/>
+    <line x1="78.150" y1="196.000" x2="84.150" y2="196.000"/>
+    <line x1="81.150" y1="193.000" x2="81.150" y2="199.000"/>
+    <circle cx="128.850" cy="196.000" r="0.300"/>
+    <line x1="125.850" y1="196.000" x2="131.850" y2="196.000"/>
+    <line x1="128.850" y1="193.000" x2="128.850" y2="199.000"/>
+    <circle cx="154.150" cy="196.000" r="0.300"/>
+    <line x1="151.150" y1="196.000" x2="157.150" y2="196.000"/>
+    <line x1="154.150" y1="193.000" x2="154.150" y2="199.000"/>
+    <path d="M 42.070,161.230 L 175.790,161.230 A 0.500,0.500 0 0 1 176.290,161.730 L 176.290,208.740 A 0.500,0.500 0 0 1 175.790,209.240 L 42.070,209.240 A 0.500,0.500 0 0 1 41.570,208.740 L 41.570,161.730 A 0.500,0.500 0 0 1 42.070,161.230 Z"/>
+    <path d="M 43.430,159.985 L 174.430,159.985 A 3.000,3.000 0 0 1 177.430,162.985 L 177.430,207.485 A 3.000,3.000 0 0 1 174.430,210.485 L 43.430,210.485 A 3.000,3.000 0 0 1 40.430,207.485 L 40.430,162.985 A 3.000,3.000 0 0 1 43.430,159.985 Z"/>
+    <line x1="55.000" y1="248.000" x2="155.000" y2="248.000"/>
+    <line x1="55.000" y1="245.500" x2="55.000" y2="250.500"/>
+    <line x1="65.000" y1="246.500" x2="65.000" y2="249.500"/>
+    <line x1="75.000" y1="246.500" x2="75.000" y2="249.500"/>
+    <line x1="85.000" y1="246.500" x2="85.000" y2="249.500"/>
+    <line x1="95.000" y1="246.500" x2="95.000" y2="249.500"/>
+    <line x1="105.000" y1="245.500" x2="105.000" y2="250.500"/>
+    <line x1="115.000" y1="246.500" x2="115.000" y2="249.500"/>
+    <line x1="125.000" y1="246.500" x2="125.000" y2="249.500"/>
+    <line x1="135.000" y1="246.500" x2="135.000" y2="249.500"/>
+    <line x1="145.000" y1="246.500" x2="145.000" y2="249.500"/>
+    <line x1="155.000" y1="245.500" x2="155.000" y2="250.500"/>
+  </g>
+
+  <!-- LAYER 04 (BLUE #0055FF): EXACT DIMENSIONS & LABELS -->
+  <g id="Layer_04_Dimensions_And_Labels" fill="none" stroke="#0055FF" stroke-width="0.14">
+        <text x="55.85" y="60.80" font-family="Consolas, Arial, sans-serif" font-size="2.3" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">Buis 1 (Ø20.0)</text>
+    <text x="55.85" y="85.00" font-family="Consolas, Arial, sans-serif" font-size="2.2" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">X=-49.15</text>
+    <text x="81.15" y="60.80" font-family="Consolas, Arial, sans-serif" font-size="2.3" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">Buis 2 (Ø20.0)</text>
+    <text x="81.15" y="85.00" font-family="Consolas, Arial, sans-serif" font-size="2.2" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">X=-23.85</text>
+    <text x="128.85" y="60.80" font-family="Consolas, Arial, sans-serif" font-size="2.3" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">Buis 3 (Ø20.0)</text>
+    <text x="128.85" y="85.00" font-family="Consolas, Arial, sans-serif" font-size="2.2" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">X=+23.85</text>
+    <text x="154.15" y="60.80" font-family="Consolas, Arial, sans-serif" font-size="2.3" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">Buis 4 (Ø20.0)</text>
+    <text x="154.15" y="85.00" font-family="Consolas, Arial, sans-serif" font-size="2.2" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">X=+49.15</text>
+    <line x1="55.850" y1="53.000" x2="81.150" y2="53.000"/>
+    <line x1="55.850" y1="51.200" x2="55.850" y2="54.800"/>
+    <line x1="81.150" y1="51.200" x2="81.150" y2="54.800"/>
+    <line x1="55.850" y1="53.000" x2="57.650" y2="52.100"/>
+    <line x1="55.850" y1="53.000" x2="57.650" y2="53.900"/>
+    <line x1="81.150" y1="53.000" x2="79.350" y2="52.100"/>
+    <line x1="81.150" y1="53.000" x2="79.350" y2="53.900"/>
+    <text x="68.50" y="51.50" font-family="Consolas, Arial, sans-serif" font-size="2.5" font-weight="bold" text-anchor="middle" fill="#0055FF" stroke="none">25.30 mm</text>
+    <line x1="55.850" y1="60.000" x2="55.850" y2="51.500"/>
+    <line x1="81.150" y1="60.000" x2="81.150" y2="51.500"/>
+    <line x1="81.150" y1="53.000" x2="128.850" y2="53.000"/>
+    <line x1="81.150" y1="51.200" x2="81.150" y2="54.800"/>
+    <line x1="128.850" y1="51.200" x2="128.850" y2="54.800"/>
+    <line x1="81.150" y1="53.000" x2="82.950" y2="52.100"/>
+    <line x1="81.150" y1="53.000" x2="82.950" y2="53.900"/>
+    <line x1="128.850" y1="53.000" x2="127.050" y2="52.100"/>
+    <line x1="128.850" y1="53.000" x2="127.050" y2="53.900"/>
+    <text x="105.00" y="51.50" font-family="Consolas, Arial, sans-serif" font-size="2.5" font-weight="bold" text-anchor="middle" fill="#0055FF" stroke="none">47.70 mm</text>
+    <line x1="81.150" y1="60.000" x2="81.150" y2="51.500"/>
+    <line x1="128.850" y1="60.000" x2="128.850" y2="51.500"/>
+    <line x1="128.850" y1="53.000" x2="154.150" y2="53.000"/>
+    <line x1="128.850" y1="51.200" x2="128.850" y2="54.800"/>
+    <line x1="154.150" y1="51.200" x2="154.150" y2="54.800"/>
+    <line x1="128.850" y1="53.000" x2="130.650" y2="52.100"/>
+    <line x1="128.850" y1="53.000" x2="130.650" y2="53.900"/>
+    <line x1="154.150" y1="53.000" x2="152.350" y2="52.100"/>
+    <line x1="154.150" y1="53.000" x2="152.350" y2="53.900"/>
+    <text x="141.50" y="51.50" font-family="Consolas, Arial, sans-serif" font-size="2.5" font-weight="bold" text-anchor="middle" fill="#0055FF" stroke="none">25.30 mm</text>
+    <line x1="128.850" y1="60.000" x2="128.850" y2="51.500"/>
+    <line x1="154.150" y1="60.000" x2="154.150" y2="51.500"/>
+    <line x1="55.850" y1="44.500" x2="154.150" y2="44.500"/>
+    <line x1="55.850" y1="42.700" x2="55.850" y2="46.300"/>
+    <line x1="154.150" y1="42.700" x2="154.150" y2="46.300"/>
+    <line x1="55.850" y1="44.500" x2="57.650" y2="43.600"/>
+    <line x1="55.850" y1="44.500" x2="57.650" y2="45.400"/>
+    <line x1="154.150" y1="44.500" x2="152.350" y2="43.600"/>
+    <line x1="154.150" y1="44.500" x2="152.350" y2="45.400"/>
+    <text x="105.00" y="43.00" font-family="Consolas, Arial, sans-serif" font-size="2.6" font-weight="bold" text-anchor="middle" fill="#0055FF" stroke="none">Totaal Hart-op-Hart Buis 1 t/m 4 = 98.30 mm</text>
+    <line x1="55.850" y1="51.500" x2="55.850" y2="43.000"/>
+    <line x1="154.150" y1="51.500" x2="154.150" y2="43.000"/>
+    <text x="105.00" y="14.00" font-family="Consolas, Arial, sans-serif" font-size="3.3" font-weight="bold" text-anchor="middle" fill="#0055FF" stroke="none">MAL 1: CENTERPONS / AANTEKEN-BOORMAL (SCHAAL 1:1 — IN-8-2 / TAF1317A)</text>
+    <text x="105.00" y="19.00" font-family="Consolas, Arial, sans-serif" font-size="2.4" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">Rode puntjes = Ø1.2 mm priem-/centerponsgat in exacte hart van elke Ø20.0 mm buis &amp; M2 schroefgat</text>
+    <text x="105.00" y="101.50" font-family="Consolas, Arial, sans-serif" font-size="2.3" font-weight="bold" text-anchor="middle" fill="#0055FF" stroke="none">▼ VOORKANT KLOK (Buizen staan 13.24 mm vanaf voorrand PCB en 34.77 mm vanaf achterrand PCB) ▼</text>
+    <text x="55.85" y="191.00" font-family="Consolas, Arial, sans-serif" font-size="2.3" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">Ø20.0</text>
+    <text x="81.15" y="191.00" font-family="Consolas, Arial, sans-serif" font-size="2.3" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">Ø20.0</text>
+    <text x="128.85" y="191.00" font-family="Consolas, Arial, sans-serif" font-size="2.3" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">Ø20.0</text>
+    <text x="154.15" y="191.00" font-family="Consolas, Arial, sans-serif" font-size="2.3" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">Ø20.0</text>
+    <text x="105.00" y="136.00" font-family="Consolas, Arial, sans-serif" font-size="3.2" font-weight="bold" text-anchor="middle" fill="#0055FF" stroke="none">MAL 2: Ø20.0 mm BOORGELEIDER &amp; ONDERZIJDE PCB-UITSPARINGS-MAL (134.72 x 48.01 mm)</text>
+    <text x="105.00" y="141.00" font-family="Consolas, Arial, sans-serif" font-size="2.3" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">Rode cirkels = Volledige Ø20.0 mm buisgaten + Ø2.1 mm M2-gaten | Teal kader = Freeskamer voor 2x TAF1317A PCB</text>
+    <text x="108.93" y="174.00" font-family="Consolas, Arial, sans-serif" font-size="2.3" font-weight="normal" text-anchor="middle" fill="#0055FF" stroke="none">2x Gekoppelde TAF1317A PCB = 134.72 x 48.01 mm (Aanbevolen freeskamer: 137 x 50.5 mm)</text>
+    <text x="105.00" y="225.50" font-family="Consolas, Arial, sans-serif" font-size="2.3" font-weight="bold" text-anchor="middle" fill="#0055FF" stroke="none">▼ VOORKANT KLOK ▼</text>
+    <line x1="55.000" y1="244.500" x2="155.000" y2="244.500"/>
+    <line x1="55.000" y1="242.700" x2="55.000" y2="246.300"/>
+    <line x1="155.000" y1="242.700" x2="155.000" y2="246.300"/>
+    <line x1="55.000" y1="244.500" x2="56.800" y2="243.600"/>
+    <line x1="55.000" y1="244.500" x2="56.800" y2="245.400"/>
+    <line x1="155.000" y1="244.500" x2="153.200" y2="243.600"/>
+    <line x1="155.000" y1="244.500" x2="153.200" y2="245.400"/>
+    <text x="105.00" y="243.00" font-family="Consolas, Arial, sans-serif" font-size="2.5" font-weight="bold" text-anchor="middle" fill="#0055FF" stroke="none">CONTROLE-MAATBALK: EXACT 100.0 mm (10.0 cm)</text>
+  </g>
+</svg>
