@@ -100,18 +100,18 @@ sensor:
                     id(update_nixie_display).execute(watts);
                   }
 
-# ESP32-C3 SuperMini single-side pinout (on the 5.5V, GND, 3.3V, 4, 3, 2, 1, 0 header row):
-# LED = GPIO4, EN = GPIO3, CLK = GPIO2, DI = GPIO1, Optional Button = GPIO0
+# ESP32-C3 SuperMini pinout:
+# LED = GPIO2, EN = GPIO3, CLK = GPIO4, DI = GPIO5, Optional Button = GPIO0
 output:
   - platform: gpio
     id: nixie_en_pin
     pin: GPIO3
   - platform: gpio
     id: nixie_clk_pin
-    pin: GPIO2
+    pin: GPIO4
   - platform: gpio
     id: nixie_din_pin
-    pin: GPIO1
+    pin: GPIO5
 
 # Optional physical pushbutton to cycle through display modes (connected between GPIO0 and GND)
 binary_sensor:
@@ -262,7 +262,7 @@ number:
 light:
   - platform: esp32_rmt_led_strip
     channel_colors: GRB
-    pin: GPIO4
+    pin: GPIO2
     num_leds: 6
     chipset: ws2812
     use_psram: false
