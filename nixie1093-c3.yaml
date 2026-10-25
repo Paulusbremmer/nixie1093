@@ -101,7 +101,7 @@ sensor:
                   }
 
 # ESP32-C3 SuperMini pinout:
-# LED = GPIO2, EN = GPIO3, CLK = GPIO4, DI = GPIO5, Optional Button = GPIO0
+# LED = GPIO2, EN = GPIO3, CLK = GPIO4, DI = GPIO1, Optional Button = GPIO0
 output:
   - platform: gpio
     id: nixie_en_pin
@@ -111,7 +111,7 @@ output:
     pin: GPIO4
   - platform: gpio
     id: nixie_din_pin
-    pin: GPIO5
+    pin: GPIO1
 
 # Optional physical pushbutton to cycle through display modes (connected between GPIO0 and GND)
 binary_sensor:
